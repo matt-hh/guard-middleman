@@ -1,0 +1,17 @@
+= guard-middleman
+
+Guard gem for Middleman
+
+== Install
+
+Install gem:
+
+    gem install guard-middleman
+
+Add guard definition:
+
+    guard init middleman
+
+== Links
+
+https://github.com/guard/guard#readme
