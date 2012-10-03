@@ -55,7 +55,7 @@ module Guard
       def build_command
         cmd = []
         cmd << "bundle exec" if bundler?
-        cmd << "mm-build"
+        cmd << "middleman build"
 
         cmd.join(' ')
       end
