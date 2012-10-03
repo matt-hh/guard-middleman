@@ -10,12 +10,12 @@ Gem::Specification.new do |s|
   s.email       = ["matt@foryourcontent.de"]
   s.homepage    = "http://rubygems.org/gems/guard-middleman"
   s.summary     = %q{Guard gem for Middleman}
-  s.description = %q{Guard gem for Middleman - automatically runs mm-build}
+  s.description = %q{Guard gem for Middleman - automatically runs middleman build}
 
   s.rubyforge_project = "guard-middleman"
 
-  s.add_dependency 'guard', '>= 0.4.2'
-  s.add_dependency 'middleman', '>= 1.2.7'
+  s.add_dependency 'guard', '>= 1.4.0'
+  s.add_dependency 'middleman', '~> 3.0.0'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
