@@ -4,7 +4,7 @@ require "guard/middleman/version"
 
 Gem::Specification.new do |s|
   s.name        = "guard-middleman"
-  s.version     = Guard::Middleman::VERSION
+  s.version     = Guard::MiddlemanVersion::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Matthias Döring"]
   s.email       = ["matt@foryourcontent.de"]
