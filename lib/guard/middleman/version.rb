@@ -1,5 +1,5 @@
 module Guard
-  module Middleman
+  module MiddlemanVersion
     VERSION = "0.2.0"
   end
 end
