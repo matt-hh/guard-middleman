@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "guard-middleman"
 
   s.add_dependency 'guard', '>= 1.4.0'
-  s.add_dependency 'middleman', '~> 3.0.0'
+  s.add_dependency 'middleman', '>= 3.0.0'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
