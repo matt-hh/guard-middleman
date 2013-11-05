@@ -56,6 +56,7 @@ module Guard
         cmd = []
         cmd << "bundle exec" if bundler?
         cmd << "middleman build"
+        cmd << '--verbose' if @options[:verbose]
 
         cmd.join(' ')
       end
