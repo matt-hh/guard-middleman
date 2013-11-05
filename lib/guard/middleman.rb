@@ -7,9 +7,9 @@ module Guard
     def initialize(watchers=[], options={})
       super
       # init stuff here, thx!
-      @options = {
-        :bundler => File.exist?("#{Dir.pwd}/Gemfile")
-      }.merge(options)
+      @options = HashWithIndifferentAccess.new(
+        {:bundler => File.exist?("#{Dir.pwd}/Gemfile")}.merge(options)
+      )
     end
 
     def bundler?
@@ -56,6 +56,12 @@ module Guard
         cmd = []
         cmd << "bundle exec" if bundler?
         cmd << "middleman build"
+        cmd << '--verbose' if @options[:verbose]
+        cmd << '--clean' if @options[:clean]
+        cmd << '--no-clean' if @options[:no_clean] || @options['no-clean']
+        cmd << "--glob=#{@options[:glob]}" if @options[:glob]
+        cmd << "--instrument=#{@options[:instrument]}" if @options[:instrument]
+        cmd << '--profile' if @options[:profile]
 
         cmd.join(' ')
       end
