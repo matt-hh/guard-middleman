@@ -7,7 +7,7 @@ module Guard
     def initialize(watchers=[], options={})
       super
       # init stuff here, thx!
-      @options = HashWithIndifferentAccess.new(
+      @options = Thor::CoreExt::HashWithIndifferentAccess.new(
         {:bundler => File.exist?("#{Dir.pwd}/Gemfile")}.merge(options)
       )
     end
