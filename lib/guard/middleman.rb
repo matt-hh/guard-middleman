@@ -56,9 +56,9 @@ module Guard
         cmd = []
         cmd << "bundle exec" if bundler?
         cmd << "middleman build"
-        cmd << '--verbose' if @options[:verbose]
-        cmd << '--clean' if @options[:clean]
-        cmd << '--no-clean' if @options[:no_clean] || @options['no-clean']
+        cmd << '--verbose'   if @options[:verbose]
+        cmd << '--clean'     if @options[:clean]
+        cmd << '--no-clean'  if @options[:no_clean] || @options['no-clean']
         cmd << "--glob=#{@options[:glob]}" if @options[:glob]
         cmd << "--instrument=#{@options[:instrument]}" if @options[:instrument]
         cmd << '--profile' if @options[:profile]
