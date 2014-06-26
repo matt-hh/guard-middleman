@@ -8,7 +8,7 @@ module Guard
       super
       # init stuff here, thx!
       @options = Thor::CoreExt::HashWithIndifferentAccess.new(
-        {:bundler => File.exist?("#{Dir.pwd}/Gemfile")}.merge(options)
+        {:run_on_start => false, :bundler => File.exist?("#{Dir.pwd}/Gemfile")}.merge(options)
       )
     end
 
@@ -26,6 +26,9 @@ module Guard
     # Called once when Guard starts
     # Please override initialize method to init stuff
     def start
+      if @options[:run_on_start]
+        system(build_command)
+      end
       true
     end
 

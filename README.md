@@ -15,6 +15,7 @@ Add guard definition:
 ## Options
 
 * `verbose`: verbose output, default = false
+* `run_on_start`: whether or not to build middleman on start of guard, default = false
 * `clean`: erase the build directory before run, default = false
 * `no-clean`: never erase the build directory, default = false
 * `glob`: specify a subset of the project to build, need to pass a string representing the subset. e.g. `glob: 'source/about_pages/*'`
