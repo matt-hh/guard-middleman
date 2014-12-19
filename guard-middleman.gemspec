@@ -12,8 +12,6 @@ Gem::Specification.new do |s|
   s.summary     = %q{Guard gem for Middleman}
   s.description = %q{Guard gem for Middleman - automatically runs middleman build}
 
-  s.rubyforge_project = "guard-middleman"
-
   s.add_dependency 'guard', '>= 1.4.0'
   s.add_dependency 'middleman', '>= 3.0.0'
 
