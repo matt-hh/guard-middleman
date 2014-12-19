@@ -1,10 +1,10 @@
-require 'guard'
-require 'guard/guard'
+require 'thor'
+require 'guard/compat/plugin'
 
 module Guard
-  class Middleman < Guard
+  class Middleman < Plugin
 
-    def initialize(watchers=[], options={})
+    def initialize(options={})
       super
       # init stuff here, thx!
       @options = Thor::CoreExt::HashWithIndifferentAccess.new(

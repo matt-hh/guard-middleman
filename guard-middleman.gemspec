@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{Guard gem for Middleman - automatically runs middleman build}
 
   s.add_dependency 'guard', '>= 1.4.0'
+  s.add_dependency 'guard-compat', '~> 1.1'
   s.add_dependency 'middleman', '>= 3.0.0'
 
   s.files         = `git ls-files`.split("\n")
