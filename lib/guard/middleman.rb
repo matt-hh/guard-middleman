@@ -27,7 +27,7 @@ module Guard
     # Please override initialize method to init stuff
     def start
       if @options[:run_on_start]
-        system(build_command)
+        Kernel.system(build_command)
       end
       true
     end
@@ -46,7 +46,7 @@ module Guard
     # Called on Ctrl-\ signal
     # This method should be principally used for long action like running all specs/tests/...
     def run_all
-      system(build_command)
+      Kernel.system(build_command)
     end
 
     # Called on file(s) modifications
