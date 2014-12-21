@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://rubygems.org/gems/guard-middleman"
   s.summary     = %q{Guard gem for Middleman}
   s.description = %q{Guard gem for Middleman - automatically runs middleman build}
+  s.license     = "MIT"
 
   s.add_dependency 'guard', '>= 1.4.0'
   s.add_dependency 'guard-compat', '~> 1.1'
